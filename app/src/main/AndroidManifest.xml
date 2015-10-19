@@ -15,7 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PaperTransformationsActivity"
+        <activity
+            android:name=".PaperTransformationsActivity"
+            android:theme="@style/AppThemeNoBar">
+        </activity>
+        <activity android:name=".DynamicSurfacesActivity"
             android:theme="@style/AppThemeNoBar">
         </activity>
     </application>
