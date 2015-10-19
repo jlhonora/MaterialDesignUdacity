@@ -5,3 +5,4 @@ Url: https://www.udacity.com/course/material-design-for-android-developers--ud86
 Examples implemented:
 
 1. Floating Action Button, from design library and from scratch
+2. Simple paper transformations (ripple effect)
