@@ -17,9 +17,13 @@
         </activity>
         <activity
             android:name=".PaperTransformationsActivity"
-            android:theme="@style/AppThemeNoBar">
+            android:theme="@style/AppThemeNoBar" >
         </activity>
-        <activity android:name=".DynamicSurfacesActivity"
+        <activity
+            android:name=".DynamicSurfacesActivity"
+            android:theme="@style/AppThemeNoBar" >
+        </activity>
+        <activity android:name=".ScrimActivity"
             android:theme="@style/AppThemeNoBar">
         </activity>
     </application>
