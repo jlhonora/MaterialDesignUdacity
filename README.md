@@ -6,6 +6,7 @@ Examples implemented:
 2. Simple paper transformations (ripple effect)
 3. Dynamic surfaces
 4. Bold graphic design: scrim for bright headers.
+5. Simple animations with TransitionManager
 
 Course Url: https://www.udacity.com/course/material-design-for-android-developers--ud862
 Official samples: https://github.com/udacity/ud862-samples

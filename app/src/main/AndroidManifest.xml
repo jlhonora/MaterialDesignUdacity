@@ -23,8 +23,11 @@
             android:name=".DynamicSurfacesActivity"
             android:theme="@style/AppThemeNoBar" >
         </activity>
-        <activity android:name=".ScrimActivity"
-            android:theme="@style/AppThemeNoBar">
+        <activity
+            android:name=".ScrimActivity"
+            android:theme="@style/AppThemeNoBar" >
+        </activity>
+        <activity android:name=".AnimationsActivity" >
         </activity>
     </application>
 
