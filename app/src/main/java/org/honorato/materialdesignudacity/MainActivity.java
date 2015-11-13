@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        Intent intent = new Intent(this, ScrollAnimationActivity.class);
+        Intent intent = new Intent(this, GridActivity.class);
         startActivity(intent);
     }
 }

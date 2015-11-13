@@ -29,8 +29,22 @@
         </activity>
         <activity android:name=".AnimationsActivity" >
         </activity>
-        <activity android:name=".ScrollAnimationActivity"
+        <activity
+            android:name=".ScrollAnimationActivity"
             android:theme="@style/AppThemeNoBar" >
+        </activity>
+        <activity
+            android:name=".GridActivity"
+            android:theme="@style/AppThemeNoBar" >
+        </activity>
+        <activity
+            android:name=".GridDetailActivity"
+            android:label="@string/title_activity_grid_detail"
+            android:parentActivityName=".GridActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.honorato.materialdesignudacity.GridActivity" />
         </activity>
     </application>
 
