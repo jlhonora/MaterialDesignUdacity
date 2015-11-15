@@ -61,7 +61,7 @@ public class GridDetailActivity extends AppCompatActivity {
         }
         toolbar.setBackgroundColor(barColor);
 
-        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) this.findViewById(R.id.collapsing_toolbar_layout);
+        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) this.findViewById(R.id.toolbar_layout);
         if (collapsingToolbarLayout != null) {
             collapsingToolbarLayout.setBackgroundColor(barColor);
             collapsingToolbarLayout.setContentScrimColor(barColor);
