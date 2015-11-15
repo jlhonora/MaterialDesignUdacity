@@ -36,7 +36,7 @@ public class GridActivity extends AppCompatActivity {
             {"#D32F2F", "#F44336", "#FFCDD2", "#FFFFFF", "#448AFF", "#212121", "#727272", "#B6B6B6"},
             {"#0288D1", "#03A9F4", "#B3E5FC", "#FFFFFF", "#9E9E9E", "#212121", "#727272", "#B6B6B6"},
             {"#FFA000", "#FFC107", "#FFECB3", "#FFFFFF", "#9E9E9E", "#212121", "#727272", "#B6B6B6"},
-            {"#00796B", "#FFC107", "#B2DFDB", "#FFFFFF", "#9E9E9E", "#212121", "#727272", "#B6B6B6"},
+            {"#00796B", "#009688", "#B2DFDB", "#FFFFFF", "#9E9E9E", "#212121", "#727272", "#B6B6B6"},
             {"#E64A19", "#FF5722", "#FFCCBC", "#FFFFFF", "#448AFF", "#212121", "#727272", "#B6B6B6"},
             {"#512DA8", "#673AB7", "#D1C4E9", "#FFFFFF", "#03A9F4", "#212121", "#727272", "#B6B6B6"},
     };
@@ -51,7 +51,6 @@ public class GridActivity extends AppCompatActivity {
     public final static int DIVIDER        = 7;
 
     @Bind(R.id.grid) protected GridView mGrid;
-    @Bind(R.id.grid_main_layout) protected View mMainLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,7 +134,7 @@ public class GridActivity extends AppCompatActivity {
             }
 
             String[] colors = getItem(position);
-            tile.setBackgroundColor(Color.parseColor(colors[DARK_PRIMARY]));
+            tile.setBackgroundColor(Color.parseColor(colors[PRIMARY]));
             return tile;
         }
     }
