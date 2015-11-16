@@ -3,7 +3,9 @@ package org.honorato.materialdesignudacity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -96,7 +98,21 @@ public class GridActivity extends AppCompatActivity {
     protected void onPositionSelected(int pos) {
         Intent intent = new Intent(this, GridDetailActivity.class);
         intent.putExtra(GridDetailActivity.KEY_COLORS, mColorSet[pos]);
-        startActivity(intent);
+
+        View tile = mGrid.getChildAt(pos);
+        // Check more in:
+        // http://developer.android.com/reference/android/support/v4/app/ActivityOptionsCompat.html
+        // https://github.com/codepath/android_guides/wiki/Shared-Element-Activity-Transition
+        Bundle bundle = ActivityOptionsCompat
+                .makeSceneTransitionAnimation(this, tile, "grid_element")
+                .toBundle();
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            startActivity(intent, bundle);
+        } else {
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
     }
 
     public class ColorSetAdapter extends BaseAdapter {
@@ -135,6 +151,10 @@ public class GridActivity extends AppCompatActivity {
 
             String[] colors = getItem(position);
             tile.setBackgroundColor(Color.parseColor(colors[PRIMARY]));
+
+            if (Build.VERSION.SDK_INT >= 21) {
+                tile.setTransitionName("grid_element");
+            }
             return tile;
         }
     }

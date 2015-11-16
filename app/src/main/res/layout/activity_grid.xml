@@ -12,6 +12,8 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:numColumns="2"
+        android:verticalSpacing="1dip"
+        android:horizontalSpacing="1dip"
         />
 
 </RelativeLayout>
